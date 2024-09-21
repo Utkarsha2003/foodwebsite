@@ -1,0 +1,351 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS Varibles */
+:root {
+    --navbar-height: 59px;
+
+}
+
+/*navigation bar: logo and image */
+#logo {
+    margin: 6px 19px;
+}
+
+#logo img {
+    /* margin: 4px 6px; */
+    height: 79px;
+    border-radius: 114px;
+
+}
+
+/*navigation bar: list styling */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar ul {
+    display: flex;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a {
+    color: ghostwhite;
+    padding: 5px 22px;
+    display: block;
+    border-radius: 20px;
+    text-decoration: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: antiquewhite;
+    font-weight: 900;
+}
+
+/* home section */
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 150px;
+    height: 550px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: "";
+    background: url('bg4.jpg') no-repeat center center/cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.89;
+    top: 0;
+    left: 0;
+    box-shadow: 0px 0px 8px 9px rgb(228, 136, 136) inset;
+    border-radius: 9px;
+}
+
+#home h1 {
+    color: ivory;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+
+#home p {
+    color: ivory;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* services section */
+b {
+    display: flex;
+    /* height: 114vh; */
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    background-color: rgb(228, 136, 136);
+
+}
+
+#services-container {
+    margin-top: 100px;
+    background-color: rgb(228, 136, 136);
+    box-shadow: 0px 0px 18px 28px rgb(228, 136, 136);
+}
+
+.box {
+    height: 416px;
+    width: 297px;
+    padding: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    /* margin: 4px; */
+    background-color: ivory;
+}
+
+#services .box img {
+    height: 200px;
+    width: 200px;
+    padding: 0%;
+    display: block;
+    /* to center item usin margin auto */
+    margin: auto;
+    border-radius: 5px;
+}
+
+#services .box p {
+    font-family: 'Exo 2', sans-serif;
+}
+
+/* utility classes */
+.h-primary {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3.8rem;
+    padding: 0px;
+    color: ivory;
+    margin-bottom: 7px;
+
+}
+
+.h-secondary {
+    font-size: 1.8rem;
+    padding: 12px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.btn {
+    padding: 6px 20px;
+    border: 2px solid ghostwhite;
+    background-color: indianred;
+    color: ghostwhite;
+    margin: 17px;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    /* margin-bottom: 100px; */
+}
+
+.btn:hover {
+    border: 2px solid indianred;
+    background-color: ghostwhite;
+    color: indianred;
+    font-size: large;
+    cursor: pointer;
+    margin: 17px;
+}
+
+.center {
+    text-align: center;
+}
+
+/* client-section */
+#client-section {
+    position: relative;
+    height: 100%;
+}
+
+#client-section::before {
+    content: "";
+    position: absolute;
+    background: url('moctls.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.8;
+    box-shadow: 0px 0px 8px 9px rgb(228, 136, 136) inset;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-primary_center {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 3.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.client-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+    z-index: -1;
+}
+
+#clients img {
+    height: 124px;
+
+}
+
+/* contact section */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    opacity: 0.6;
+    background: url('pzza.jpg') no-repeat center center/cover;
+    box-shadow: 0px 0px 8px 9px rgb(228, 136, 136) inset;
+}
+
+/* form */
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    border: 1px solid white;
+    opacity: 0.8;
+    font-size: 1.1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    font-family: 'Exo 2', sans-serif;
+    margin-bottom: 0.7px;
+    font-weight: 990;
+
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 9px 18px;
+}
+
+@media screen and (max-width: 760px) {
+
+    /* navigation */
+    #logo img{
+        height: 40px;
+    }
+    #logo{
+        margin: -5px;
+    }
+    #navbar {
+        flex-direction: column;
+    }
+    #navbar ul li{
+        font-size: 19px;
+    }
+    #navbar ul li a{
+        padding: 2px 12px;
+    }
+    .h-primary{
+        font-size: 2.8rem;
+        margin-top: 275px;
+        margin-bottom: -3px;
+    }
+
+    /* home */
+    #home {
+        height: 280px;
+        padding: 0px 25px;
+
+
+    }
+    #home::before{
+        height: 480;
+    }
+    #home p{
+        font-size: 12px;
+        text-align: justify;
+    }
+    .btn{
+        margin: 6px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        padding: 2px;
+    }
+
+    /* services section */
+    #services.box {
+        flex-direction: column;
+    }
+
+    /* clients section */
+    .client-item {
+        flex-direction: column;
+    }
+
+    /* contact us section */
+    /* footer */
+}
